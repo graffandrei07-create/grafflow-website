@@ -224,6 +224,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // PROMO MODAL
+    const promoModal = document.getElementById('promoModal');
+    const promoClose = document.getElementById('promoClose');
+    if (promoModal && promoClose) {
+        if (!localStorage.getItem('promoShown')) {
+            setTimeout(() => { promoModal.classList.add('active'); }, 8000);
+        }
+        promoClose.addEventListener('click', () => {
+            promoModal.classList.remove('active');
+            localStorage.setItem('promoShown', 'true');
+        });
+        promoModal.addEventListener('click', (e) => {
+            if (e.target === promoModal) {
+                promoModal.classList.remove('active');
+                localStorage.setItem('promoShown', 'true');
+            }
+        });
+    }
+
     // PROMO TIMER
     const timerKey = 'promoTimerStart';
     if (!localStorage.getItem(timerKey)) localStorage.setItem(timerKey, Date.now());

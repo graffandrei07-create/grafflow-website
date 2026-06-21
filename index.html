@@ -516,17 +516,20 @@
         </div>
     </div>
 
-    <!-- PROMO TIMER -->
-    <div class="promo-timer" id="promoTimer">
-        <div class="promo-timer__content">
-            <span class="promo-timer__text">🔥 Скидка 10% на первый заказ</span>
-            <div class="promo-timer__ countdown">
-                <div class="promo-timer__unit"><span id="timerDays">00</span><small>дн</small></div>
-                <div class="promo-timer__unit"><span id="timerHours">00</span><small>чв</small></div>
-                <div class="promo-timer__unit"><span id="timerMinutes">00</span><small>мин</small></div>
-                <div class="promo-timer__unit"><span id="timerSeconds">00</span><small>сек</small></div>
+    <!-- PROMO MODAL -->
+    <div class="modal promo-modal" id="promoModal">
+        <div class="modal__content promo-modal__content">
+            <button class="modal__close" id="promoClose">×</button>
+            <div class="promo-modal__badge">🔥 Скидка 10%</div>
+            <h3 class="promo-modal__title">Специальное предложение</h3>
+            <p class="promo-modal__desc">Закажите сайт и получите скидку 10% на первый проект</p>
+            <div class="promo-modal__timer">
+                <div class="promo-modal__unit"><span id="timerDays">00</span><small>дн</small></div>
+                <div class="promo-modal__unit"><span id="timerHours">00</span><small>чв</small></div>
+                <div class="promo-modal__unit"><span id="timerMinutes">00</span><small>мин</small></div>
+                <div class="promo-modal__unit"><span id="timerSeconds">00</span><small>сек</small></div>
             </div>
-            <a href="#contacts" class="btn btn--primary btn--small">Заказать со скидкой</a>
+            <a href="#contacts" class="btn btn--primary btn--full" onclick="document.getElementById('promoModal').classList.remove('active')">Заказать со скидкой</a>
         </div>
     </div>
 
