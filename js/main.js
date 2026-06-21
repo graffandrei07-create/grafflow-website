@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     // BURGER MENU
     const burger = document.getElementById('burger');
@@ -248,11 +248,9 @@
     });
 
     // PRELOADER
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            document.getElementById('preloader').classList.add('hidden');
-        }, 500);
-    });
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => { preloader.classList.add('hidden'); }, 1500);
+    window.addEventListener('load', () => { preloader.classList.add('hidden'); });
 
     // THEME TOGGLE
     const themeToggle = document.getElementById('themeToggle');
