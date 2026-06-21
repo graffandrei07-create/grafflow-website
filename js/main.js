@@ -271,19 +271,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // CHECKLIST BANNER
     const checklistBanner = document.getElementById('checklistBanner');
     const checklistClose = document.getElementById('checklistClose');
-    const checklistForm = document.getElementById('checklistForm');
 
-    if (checklistBanner && checklistClose && checklistForm) {
+    if (checklistBanner && checklistClose) {
         if (!localStorage.getItem('checklistDismissed')) {
             setTimeout(() => checklistBanner.classList.add('active'), 5000);
         }
         checklistClose.addEventListener('click', () => {
-            checklistBanner.classList.remove('active');
-            localStorage.setItem('checklistDismissed', 'true');
-        });
-        checklistForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Чек-лист отправлен на вашу почту!');
             checklistBanner.classList.remove('active');
             localStorage.setItem('checklistDismissed', 'true');
         });

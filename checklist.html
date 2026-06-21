@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чек-лист | 10 вопросов к подрядчику | GrafFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 20mm; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1a1a1a; line-height: 1.6; background: #fff; }
+        .page { max-width: 210mm; margin: 0 auto; padding: 40px; }
+        
+        /* COVER */
+        .cover { text-align: center; padding: 60px 40px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: #fff; border-radius: 12px; margin-bottom: 40px; }
+        .cover__logo { font-size: 32px; font-weight: 800; color: #c4bab0; letter-spacing: 3px; margin-bottom: 24px; }
+        .cover__title { font-size: 36px; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .cover__subtitle { font-size: 18px; color: #999; margin-bottom: 32px; }
+        .cover__badge { display: inline-block; background: #c4bab0; color: #0a0a0a; padding: 8px 24px; border-radius: 100px; font-size: 14px; font-weight: 600; }
+        
+        /* SECTIONS */
+        .section { margin-bottom: 32px; page-break-inside: avoid; }
+        .section__number { display: inline-block; width: 40px; height: 40px; background: #c4bab0; color: #0a0a0a; border-radius: 50%; text-align: center; line-height: 40px; font-weight: 700; font-size: 18px; margin-bottom: 12px; }
+        .section__title { font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #0a0a0a; }
+        .section__desc { font-size: 15px; color: #555; margin-bottom: 16px; }
+        .checklist { list-style: none; }
+        .checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+        .checklist li:last-child { border-bottom: none; }
+        .check { width: 20px; height: 20px; border: 2px solid #c4bab0; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+        
+        /* TIPS */
+        .tip { background: #f8f6f3; border-left: 4px solid #c4bab0; padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 16px; }
+        .tip__title { font-size: 13px; font-weight: 600; color: #c4bab0; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .tip__text { font-size: 14px; color: #555; }
+        
+        /* FOOTER */
+        .footer { text-align: center; padding: 40px; background: #0a0a0a; color: #fff; border-radius: 12px; margin-top: 40px; }
+        .footer__logo { font-size: 24px; font-weight: 700; color: #c4bab0; margin-bottom: 16px; }
+        .footer__text { font-size: 14px; color: #888; margin-bottom: 16px; }
+        .footer__link { color: #c4bab0; text-decoration: none; font-weight: 600; }
+        
+        /* NOTE */
+        .note { text-align: center; font-size: 12px; color: #999; margin-top: 24px; }
+        
+        @media print {
+            .page { padding: 0; }
+            .cover, .footer { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- COVER -->
+        <div class="cover">
+            <div class="cover__logo">GRAFFLOW</div>
+            <h1 class="cover__title">10 вопросов к подрядчику<br>перед началом работы</h1>
+            <p class="cover__subtitle">Чек-лист, который поможет выбрать исполнителя<br>и избежать ошибок при заказе сайта</p>
+            <span class="cover__badge">Бесплатный чек-лист</span>
+        </div>
+
+        <!-- INTRO -->
+        <div class="section">
+            <p style="font-size: 16px; color: #333; margin-bottom: 24px;">Заказывая сайт, вы инвестируете в свой бизнес. Этот чек-лист поможет задать правильные вопросы и выбрать надёжного исполнителя. Ответьте на каждый вопрос — и вы будете уверены в своём выборе.</p>
+        </div>
+
+        <!-- 1 -->
+        <div class="section">
+            <span class="section__number">1</span>
+            <h2 class="section__title">Покажите портфолио</h2>
+            <p class="section__desc">Попросите показать 3-5 примеров работ, похожих на ваш проект.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Есть ли проекты в моей нише/индустрии?</li>
+                <li><span class="check"></span>Можно ли посмотреть работающие сайты (не только скриншоты)?</li>
+                <li><span class="check"></span>Есть ли отзывы от реальных клиентов?</li>
+            </ul>
+            <div class="tip">
+                <div class="tip__title">Совет</div>
+                <div class="tip__text">Проверьте портфолио вживую: откройте сайты, проверьте скорость загрузки и мобильную версию.</div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="section">
+            <span class="section__number">2</span>
+            <h2 class="section__title">Технологии и подход</h2>
+            <p class="section__desc">Узнайте, на чём делают сайт и почему.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Какой технологический стек используется?</li>
+                <li><span class="check"></span>Сайт будет адаптивным (мобильные, планшеты)?</li>
+                <li><span class="check"></span>Как обеспечивается скорость загрузки?</li>
+                <li><span class="check"></span>Безопасность: SSL, защита от взлома?</li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="section">
+            <span class="section__number">3</span>
+            <h2 class="section__title">Процесс и сроки</h2>
+            <p class="section__desc">Поймите, как будет проходить работа.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Сколько этапов в процессе и какие?</li>
+                <li><span class="check"></span>Сколькоรอบов правок входит в стоимость?</li>
+                <li><span class="check"></span>Как часто будут промежуточные показы?</li>
+                <li><span class="check"></span>Кто из исполнителей будет работать над проектом?</li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="section">
+            <span class="section__number">4</span>
+            <h2 class="section__title">Стоимость и бюджет</h2>
+            <p class="section__desc">Разберитесь в цене до начала работ.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Фиксированная цена или почасовая?</li>
+                <li><span class="check"></span>Что включено в стоимость, а что — доплаты?</li>
+                <li><span class="check"></span>Какой график платежей (предоплата, этапы)?</li>
+                <li><span class="check"></span>Есть ли скрытые платежи?</li>
+            </ul>
+            <div class="tip">
+                <div class="tip__title">Совет</div>
+                <div class="tip__text">Попросите подробную смету до начала работ. Сравните 2-3 предложения.</div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="section">
+            <span class="section__number">5</span>
+            <h2 class="section__title">SEO и аналитика</h2>
+            <p class="section__desc">Убедитесь, что сайт найдут в поисковиках.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Входит ли базовая SEO-оптимизация?</li>
+                <li><span class="check"></span>Подключат ли аналитику (Яндекс.Метрика, GA4)?</li>
+                <li><span class="check"></span>Будет ли сайт в поисковой выдаче?</li>
+                <li><span class="check"></span>Помогут ли с продвижением после запуска?</li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+        <div class="section">
+            <span class="section__number">6</span>
+            <h2 class="section__title">Контент и наполнение</h2>
+            <p class="section__desc">Уточните, кто будет создавать контент.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Помогают ли с написанием текстов?</li>
+                <li><span class="check"></span>Нужны ли изображения или вы предоставляете?</li>
+                <li><span class="check"></span>Кто будет наполнять сайт после запуска?</li>
+                <li><span class="check"></span>Обучат ли управлению CMS?</li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+        <div class="section">
+            <span class="section__number">7</span>
+            <h2 class="section__title">Поддержка после запуска</h2>
+            <p class="section__desc">Узнайте, что будет после сдачи проекта.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Есть ли бесплатная поддержка после запуска?</li>
+                <li><span class="check"></span>Сколько времени реагируют на баги?</li>
+                <li><span class="check"></span>Стоимость техподдержки после бесплатного периода?</li>
+                <li><span class="check"></span>Обновляют ли сайт при выходе новых версий?</li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+        <div class="section">
+            <span class="section__number">8</span>
+            <h2 class="section__title">Права и доступы</h2>
+            <p class="section__desc">Разберитесь, кому принадлежит сайт.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Кому принадлежат права на код и дизайн?</li>
+                <li><span class="check"></span>Получу ли я доступы к хостингу и домену?</li>
+                <li><span class="check"></span>Могу ли я сменить подрядчика без потерь?</li>
+                <li><span class="check"></span>Предоставят ли исходный код?</li>
+            </ul>
+        </div>
+
+        <!-- 9 -->
+        <div class="section">
+            <span class="section__number">9</span>
+            <h2 class="section__title">Гарантии и ответственность</h2>
+            <p class="section__desc">Убедитесь, что вас защищают.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Есть ли договор с описанием обязательств?</li>
+                <li><span class="check"></span>Что если сайт не устроит?</li>
+                <li><span class="check"></span>Какие исправления бесплатны?</li>
+                <li><span class="check"></span>Есть ли гарантия на работу?</li>
+            </ul>
+        </div>
+
+        <!-- 10 -->
+        <div class="section">
+            <span class="section__number">10</span>
+            <h2 class="section__title">Коммуникация</h2>
+            <p class="section__desc">Узнайте, как будете общаться.</p>
+            <ul class="checklist">
+                <li><span class="check"></span>Какой способ связи (Telegram, email, звонки)?</li>
+                <li><span class="check"></span>В какое время можно писать/звонить?</li>
+                <li><span class="check"></span>Кто мой личный менеджер/контактное лицо?</li>
+                <li><span class="check"></span>Как часто будут отчёты о ходе работ?</li>
+            </ul>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="section" style="background: #f8f6f3; padding: 32px; border-radius: 12px; margin-top: 40px;">
+            <h2 class="section__title" style="margin-bottom: 16px;">Краткая сводка</h2>
+            <p style="font-size: 15px; color: #333; margin-bottom: 16px;">Ответьте на все 10 вопросов и сравните ответы разных подрядчиков. Тот, кто даёт чёткие и полные ответы — скорее всего, надёжный исполнитель.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div style="padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #e0e0e0;">
+                    <strong style="color: #c4bab0;">✅ Хорошие знаки:</strong>
+                    <p style="font-size: 13px; color: #555; margin-top: 8px;">Подробные ответы, портфолио с ссылками, договор, прозрачная цена, гарантии</p>
+                </div>
+                <div style="padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #e0e0e0;">
+                    <strong style="color: #e74c3c;">❌ Тревожные знаки:</strong>
+                    <p style="font-size: 13px; color: #555; margin-top: 8px;">Нет портфолио, размытые сроки, предоплата 100%, нет договора</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer__logo">GRAFFLOW</div>
+            <p class="footer__text">Создаю современные сайты, брендбуки, дашборды и презентации</p>
+            <a href="https://graffandrei07-create.github.io/grafflow-website/" class="footer__link">graffandrei07-create.github.io/grafflow-website</a>
+        </div>
+
+        <p class="note">© 2026 GrafFlow. Этот чек-лист предназначен для личного использования.</p>
+    </div>
+</body>
+</html>
