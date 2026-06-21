@@ -15,7 +15,7 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 body {
     font-family: var(--font-main);
@@ -23,6 +23,45 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+}
+
+/* SMOOTH SECTION TRANSITIONS */
+section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* SMOOTH NAV LINK TRANSITIONS */
+.nav__link, .mobile-menu__link {
+    position: relative;
+}
+
+.nav__link::after, .mobile-menu__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.nav__link:hover::after, .mobile-menu__link:hover::after {
+    width: 100%;
+}
+
+/* SECTION REVEAL ON SCROLL */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }

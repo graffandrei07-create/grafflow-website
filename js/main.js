@@ -224,50 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // PROMO MODAL
-    const promoModal = document.getElementById('promoModal');
-    const promoClose = document.getElementById('promoClose');
-    if (promoModal && promoClose) {
-        if (!localStorage.getItem('promoShown')) {
-            setTimeout(() => { promoModal.classList.add('active'); }, 8000);
-        }
-        promoClose.addEventListener('click', () => {
-            promoModal.classList.remove('active');
-            localStorage.setItem('promoShown', 'true');
-        });
-        promoModal.addEventListener('click', (e) => {
-            if (e.target === promoModal) {
-                promoModal.classList.remove('active');
-                localStorage.setItem('promoShown', 'true');
-            }
-        });
-    }
-
-    // PROMO TIMER
-    const timerKey = 'promoTimerStart';
-    if (!localStorage.getItem(timerKey)) localStorage.setItem(timerKey, Date.now());
-    const startTime = parseInt(localStorage.getItem(timerKey));
-    const endTime = startTime + 7 * 24 * 60 * 60 * 1000;
-
-    function updateTimer() {
-        const now = Date.now();
-        const diff = Math.max(0, endTime - now);
-        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const s = Math.floor((diff % (1000 * 60)) / 1000);
-        const daysEl = document.getElementById('timerDays');
-        const hoursEl = document.getElementById('timerHours');
-        const minutesEl = document.getElementById('timerMinutes');
-        const secondsEl = document.getElementById('timerSeconds');
-        if (daysEl) daysEl.textContent = String(d).padStart(2, '0');
-        if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
-        if (minutesEl) minutesEl.textContent = String(m).padStart(2, '0');
-        if (secondsEl) secondsEl.textContent = String(s).padStart(2, '0');
-    }
-    updateTimer();
-    setInterval(updateTimer, 1000);
-
     // CHECKLIST BANNER
     const checklistBanner = document.getElementById('checklistBanner');
     const checklistClose = document.getElementById('checklistClose');
@@ -320,6 +276,38 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card, .pricing-card, .timeline__item, .category-tile').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
+    });
+
+    // SECTION REVEAL ON SCROLL
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible');
+                entry.target.classList.remove('section-hidden');
+            }
+        });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('section-hidden');
+        sectionObserver.observe(section);
+    });
+
+    // STAGGERED CARD ANIMATION
+    const staggerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const cards = entry.target.querySelectorAll('.service-card, .portfolio-card, .pricing-card, .testimonial-card');
+                cards.forEach((card, index) => {
+                    card.style.transitionDelay = (index * 0.1) + 's';
+                    card.classList.add('visible');
+                });
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.services__grid, .portfolio__grid, .pricing__grid, .testimonials__grid').forEach(grid => {
+        staggerObserver.observe(grid);
     });
 
     // SMOOTH SCROLL
