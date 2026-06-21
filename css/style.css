@@ -492,7 +492,11 @@ section { padding: var(--section-padding) 0; }
 .quiz__options { display: flex; flex-direction: column; gap: 12px; }
 
 .quiz__option {
-    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 16px 20px;
     font-size: 16px;
     background: var(--color-bg);
     color: var(--color-text);
@@ -502,6 +506,27 @@ section { padding: var(--section-padding) 0; }
     transition: all 0.3s;
     text-align: left;
     font-family: var(--font-main);
+}
+
+.quiz__option strong { display: block; font-size: 16px; font-weight: 600; }
+.quiz__option small { display: block; font-size: 13px; color: var(--color-text-muted); font-weight: 400; }
+
+.quiz__step-num {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(196, 186, 176, 0.1);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+}
+
+.quiz__hint {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+    font-style: italic;
 }
 
 .quiz__option:hover {

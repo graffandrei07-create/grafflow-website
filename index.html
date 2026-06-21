@@ -256,11 +256,57 @@
             <h2 class="section-title">Какой сайт вам нужен?</h2>
             <p class="section-subtitle">Ответьте на 5 вопросов и получите рекомендацию</p>
             <div class="quiz__wrapper" id="quizWrapper">
-                <div class="quiz__step active" data-step="1"><h3 class="quiz__question">Какая цель сайта?</h3><div class="quiz__options"><button class="quiz__option" data-value="sell">Продавать товары/услуги</button><button class="quiz__option" data-value="info">Информировать аудиторию</button><button class="quiz__option" data-value="brand">Укрепить бренд</button><button class="quiz__option" data-value="collect">Собирать заявки</button></div></div>
-                <div class="quiz__step" data-step="2"><h3 class="quiz__question">Сколько страниц нужно?</h3><div class="quiz__options"><button class="quiz__option" data-value="1">1 (лендинг)</button><button class="quiz__option" data-value="5">3-5 страниц</button><button class="quiz__option" data-value="10">5-10 страниц</button><button class="quiz__option" data-value="20">10+ страниц</button></div></div>
-                <div class="quiz__step" data-step="3"><h3 class="quiz__question">Нужен ли дизайн на заказ?</h3><div class="quiz__options"><button class="quiz__option" data-value="template">Шаблонный дизайн</button><button class="quiz__option" data-value="custom">Индивидуальный дизайн</button><button class="quiz__option" data-value="premium">Премиум дизайн</button></div></div>
-                <div class="quiz__step" data-step="4"><h3 class="quiz__question">Нужна ли интеграция с CRM?</h3><div class="quiz__options"><button class="quiz__option" data-value="no">Нет</button><button class="quiz__option" data-value="yes">Да</button></div></div>
-                <div class="quiz__step" data-step="5"><h3 class="quiz__question">Какой бюджет?</h3><div class="quiz__options"><button class="quiz__option" data-value="low">До 30 000 &#8381;</button><button class="quiz__option" data-value="mid">30 000 - 100 000 &#8381;</button><button class="quiz__option" data-value="high">100 000+ &#8381;</button></div></div>
+                <div class="quiz__step active" data-step="1">
+                    <span class="quiz__step-num">1 / 5</span>
+                    <h3 class="quiz__question">Какая главная цель вашего сайта?</h3>
+                    <p class="quiz__hint">Подумайте: что сайт должен делать для вашего бизнеса?</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="sell"><strong>Продавать</strong><small>Интернет-магазин, каталог товаров, онлайн-оплата</small></button>
+                        <button class="quiz__option" data-value="info"><strong>Информировать</strong><small>Корпоративный сайт, описание услуг, контакты</small></button>
+                        <button class="quiz__option" data-value="brand"><strong>Укрепить бренд</strong><small>Лендинг, презентация компании, портфолио</small></button>
+                        <button class="quiz__option" data-value="collect"><strong>Собирать заявки</strong><small>Лендинг с формой, квиз, калькулятор стоимости</small></button>
+                    </div>
+                </div>
+                <div class="quiz__step" data-step="2">
+                    <span class="quiz__step-num">2 / 5</span>
+                    <h3 class="quiz__question">Сколько страниц планируется?</h3>
+                    <p class="quiz__hint">Не уверены? Начните с малого — потом можно расширить</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="1"><strong>1 страница</strong><small>Лендинг — всё на одном экране. Идеально для старта</small></button>
+                        <button class="quiz__option" data-value="5"><strong>3-5 страниц</strong><small>Главная, услуги, портфолио, контакты, о нас</small></button>
+                        <button class="quiz__option" data-value="10"><strong>5-10 страниц</strong><small>С блогом, каталогом или несколькими направлениями</small></button>
+                        <button class="quiz__option" data-value="20"><strong>10+ страниц</strong><small>Крупный сайт с подразделами, каталогом, личным кабинетом</small></button>
+                    </div>
+                </div>
+                <div class="quiz__step" data-step="3">
+                    <span class="quiz__step-num">3 / 5</span>
+                    <h3 class="quiz__question">Какой дизайн вам нужен?</h3>
+                    <p class="quiz__hint">Дизайн влияет на стоимость и сроки разработки</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="template"><strong>Шаблонный</strong><small>Быстро и бюджетно. Готовый макет под ваш контент</small></button>
+                        <button class="quiz__option" data-value="custom"><strong>Индивидуальный</strong><small>Уникальный дизайн под ваш бренд. Согласование в Figma</small></button>
+                        <button class="quiz__option" data-value="premium"><strong>Премиум</strong><small>Полная проработка: анимации, микроинтеракции, 3D-элементы</small></button>
+                    </div>
+                </div>
+                <div class="quiz__step" data-step="4">
+                    <span class="quiz__step-num">4 / 5</span>
+                    <h3 class="quiz__question">Нужна ли интеграция с CRM-системой?</h3>
+                    <p class="quiz__hint">CRM помогает автоматизировать обработку заявок и вести клиентскую базу</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="no"><strong>Нет, пока не нужна</strong><small>Достаточно формы обратной связи и email-уведомлений</small></button>
+                        <button class="quiz__option" data-value="yes"><strong>Да, нужна</strong><small> amoCRM, Bitrix24, HubSpot или другая система</small></button>
+                    </div>
+                </div>
+                <div class="quiz__step" data-step="5">
+                    <span class="quiz__step-num">5 / 5</span>
+                    <h3 class="quiz__question">Какой ваш бюджет на проект?</h3>
+                    <p class="quiz__hint">Точный расчёт получите после бесплатной консультации</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="low"><strong>До 30 000 &#8381;</strong><small>Лендинг на шаблоне или конструкторе</small></button>
+                        <button class="quiz__option" data-value="mid"><strong>30 000 — 100 000 &#8381;</strong><small>Сайт с индивидуальным дизайном и базовым функционалом</small></button>
+                        <button class="quiz__option" data-value="high"><strong>100 000+ &#8381;</strong><small>Полноценный проект с премиум-дизайном и интеграциями</small></button>
+                    </div>
+                </div>
                 <div class="quiz__result" id="quizResult"><h3 class="quiz__result-title">Ваша рекомендация</h3><p class="quiz__result-text" id="quizResultText"></p><a href="#contacts" class="btn btn--primary">Заказать консультацию</a></div>
                 <div class="quiz__progress"><div class="quiz__progress-bar" id="quizProgress"></div></div>
             </div>
