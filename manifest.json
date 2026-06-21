@@ -1,0 +1,21 @@
+﻿{
+    "name": "GrafFlow - Веб-разработчик на заказ",
+    "short_name": "GrafFlow",
+    "description": "Создаю современные сайты, брендбуки, дашборды и презентации",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#c4bab0",
+    "icons": [
+        {
+            "src": "images/hero-bg.jpeg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/hero-bg.jpeg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ]
+}

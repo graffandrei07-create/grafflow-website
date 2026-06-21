@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог | GrafFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .blog { padding: 120px 0 80px; }
+        .blog__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+        .blog-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; transition: all 0.3s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+        .blog-card:hover { border-color: var(--color-accent); transform: translateY(-4px); }
+        .blog-card__image { height: 180px; background: var(--color-border); display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); }
+        .blog-card__info { padding: 20px; }
+        .blog-card__date { font-size: 12px; color: var(--color-text-muted); margin-bottom: 8px; }
+        .blog-card__title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+        .blog-card__desc { font-size: 14px; color: var(--color-text-muted); line-height: 1.6; }
+        .blog-card__tag { display: inline-block; padding: 4px 12px; font-size: 11px; background: var(--color-border); border-radius: 100px; color: var(--color-accent); margin-top: 12px; }
+        .breadcrumb { padding: 120px 0 0; font-size: 14px; color: var(--color-text-muted); }
+        .breadcrumb a { color: var(--color-accent); text-decoration: none; }
+        .breadcrumb span { margin: 0 8px; }
+        @media (max-width: 768px) { .blog__grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">GrafFlow</a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="index.html#services" class="nav__link">Услуги</a>
+                <a href="index.html#portfolio" class="nav__link">Портфолио</a>
+                <a href="index.html#contacts" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <nav class="breadcrumb container">
+        <a href="index.html">Главная</a><span>/</span>Блог
+    </nav>
+    <main class="blog">
+        <div class="container">
+            <h1 class="section-title">Блог</h1>
+            <p class="section-subtitle">Статьи о веб-разработке, дизайне и AI</p>
+            <div class="blog__grid">
+                <a href="#" class="blog-card">
+                    <div class="blog-card__image">AI</div>
+                    <div class="blog-card__info">
+                        <div class="blog-card__date">19 июня 2026</div>
+                        <h2 class="blog-card__title">Как AI ускоряет разработку сайтов в 10 раз</h2>
+                        <p class="blog-card__desc">Обзор инструментов и методов, которые экономят время при создании сайтов.</p>
+                        <span class="blog-card__tag">AI</span>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-card__image">SEO</div>
+                    <div class="blog-card__info">
+                        <div class="blog-card__date">15 июня 2026</div>
+                        <h2 class="blog-card__title">SEO в 2026: что изменилось для малого бизнеса</h2>
+                        <p class="blog-card__desc">Актуальные требования Яндекса и Google для продвижения сайтов.</p>
+                        <span class="blog-card__tag">SEO</span>
+                    </div>
+                </a>
+                <a href="#" class="blog-card">
+                    <div class="blog-card__image">Дизайн</div>
+                    <div class="blog-card__info">
+                        <div class="blog-card__date">10 июня 2026</div>
+                        <h2 class="blog-card__title">10 трендов в веб-дизайне на 2026 год</h2>
+                        <p class="blog-card__desc">Минимализм, тёмные темы, микроанимации и другие тренды.</p>
+                        <span class="blog-card__tag">Дизайн</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span class="footer__copy">&copy; 2026 GrafFlow. Все права защищены.</span>
+            <div class="footer__links">
+                <a href="index.html">На главную</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
